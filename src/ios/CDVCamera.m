@@ -457,7 +457,7 @@ static NSString* toBase64(NSData* data) {
         cameraPicker.pickerPopoverController = nil;
         invoke();
     } else {
-        [[cameraPicker presentingViewController] dismissViewControllerAnimated:NO completion:invoke];
+        [[cameraPicker presentingViewController] dismissViewControllerAnimated:YES completion:invoke];
     }
 }
 
@@ -488,7 +488,7 @@ static NSString* toBase64(NSData* data) {
         weakSelf.pickerController = nil;
     };
 
-    [[cameraPicker presentingViewController] dismissViewControllerAnimated:NO completion:invoke];
+    [[cameraPicker presentingViewController] dismissViewControllerAnimated:YES completion:invoke];
 }
 
 - (CLLocationManager*)locationManager
